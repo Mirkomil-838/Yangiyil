@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muqimov Mirkomil</title>
+
+    <link rel="shortcut icon" href="git.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="git.jpg">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e7b8e12aee.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* background-color: rgba(0, 0, 0, 0.788); */
+            /* background-color: rgb(141, 141, 185); */
+            background-color: #5DA1DE;
+            /* background: url(https://thumbs.dreamstime.com/z/snow-covered-tree-branches-clear-blue-sky-background-looking-up-onto-barnches-against-107151000.jpg) no-repeat center center /cover; */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* ====================================MAIN=============================================== */
+        main h2 {
+            color: rgb(46, 46, 46);
+            margin-top: 250px;
+            animation: headingAnimation 5s linear 1;
+        }
+
+        @keyframes headingAnimation {
+            0% {
+                color: rgb(0, 0, 0);
+                transform: scale(1);
+            }
+
+            40% {
+                color: rgb(224, 223, 223);
+            }
+
+            100% {
+                color: rgb(255, 255, 255);
+                transform: scale(4);
+            }
+        }
+
+        main h2 span {
+            margin-top: 1em;
+            display: block;
+        }
+
+        .fa-snowflake-o {
+            /* this is a style of each snowflake */
+            color: white;
+            position: relative;
+            /* margin-top: 40px;     */
+        }
+
+        /* ==================up================== */
+        .toUpContainer {
+            width: 100%;
+            height: 23vh;
+            /* border: 1px solid green; */
+            /* position: absolute; */
+
+        }
+
+        .snowToUp {
+            animation-name: snowingUpAnimation;
+            animation-duration: 3s;
+
+            animation-timing-function: cubic-bezier(.21, .19, 1, -0.04);
+
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            /* margin-top: 90px; */
+        }
+
+        @keyframes snowingUpAnimation {
+
+            /* animation for snowToLeft */
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);
+                opacity: 1;
+
+            }
+
+            /* 70%{
+transform: scale(1);
+} */
+            99.9% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(-50px) translateX(0px);
+            }
+        }
+
+        /* ========middle left========================= */
+        .toLeft_Middle_Container {
+            position: absolute;
+            left: 0;
+            top: 21vh;
+            width: 51%;
+            height: 30vh;
+            /* border: 1px solid rgb(3, 25, 34); */
+
+        }
+
+        .snowToMiddleL {
+            animation-name: middleLeftAnimation;
+            animation-duration: 3s;
+
+            animation-timing-function: cubic-bezier(.21, .19, 1, -0.04);
+
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            /* margin-top: 90px; */
+        }
+
+        @keyframes middleLeftAnimation {
+
+            /* animation for snowToLeft */
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);
+                opacity: 1;
+
+            }
+
+            99.9% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(0px) translateX(-100px);
+            }
+        }
+
+        /* ====================middle right=========== */
+        .toRight_Middle_Container {
+            position: absolute;
+            right: 0;
+            top: 21vh;
+            width: 51%;
+            height: 30vh;
+            /* border: 1px solid rgb(255, 0, 221); */
+
+        }
+
+        .snowToMiddleR {
+            animation-name: middleRightAnimation;
+            animation-duration: 3s;
+
+            animation-timing-function: cubic-bezier(.21, .19, 1, -0.04);
+
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            /* margin-top: 90px; */
+        }
+
+        @keyframes middleRightAnimation {
+
+            /* animation for snowToLeft */
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);
+                opacity: 1;
+
+            }
+
+            99.9% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(0px) translateX(100px);
+            }
+        }
+
+        /* ===============bootom right=============== */
+        .toRightContainer {
+            /* just left side container. the snow inside this flows towards right side */
+            position: absolute;
+            width: 51%;
+            height: 52vh;
+            right: 0;
+            bottom: 0;
+            /* border: 1px solid black; */
+        }
+
+        .snowToRight {
+            /* this is for snowlakes falling toward right side */
+            animation-name: snowingRightAnimation;
+            animation-duration: 3s;
+            /* animation-delay: 2s; kerak emas. JS da berildi !*/
+            /* animation-timing-function: ease-in; */
+            animation-timing-function: cubic-bezier(.21, .19, 1, -0.04);
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        @keyframes snowingRightAnimation {
+
+            /* animation for snowToRight */
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);
+                opacity: 1;
+
+            }
+
+            99.9% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(100px) translateX(100px);
+            }
+        }
+
+        /* ===============bottom left================= */
+        .toLeftContainer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 51%;
+            height: 52vh;
+            /* border: 1px solid red; */
+        }
+
+        .snowToLeft {
+            /* this is for snowlakes falling toward left side */
+            animation-name: snowingLeftAnimation;
+            animation-duration: 3s;
+            /* animation-timing-function: cubic-bezier(0.155, 0.05, 0.855, 0.06); */
+            /* animation-timing-function: ease-in; */
+            animation-timing-function: cubic-bezier(.21, .19, 1, -0.04);
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        @keyframes snowingLeftAnimation {
+
+            /* animation for snowToLeft */
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);
+                opacity: 1;
+
+            }
+
+            99.9% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(180px) translateX(-100px);
+            }
+        }
+
+        /* ===============snow on face (center)=========== */
+        .toFaceContainer {
+            position: absolute;
+            left: 45%;
+            top: 20vh;
+            width: 10%;
+            height: 10%;
+            border-radius: 10px;
+            /* border: 1px solid red; */
+        }
+
+        .snowtoFace {
+            /* this is for snowlakes falling to face */
+            animation-name: snowOnFaceAnimation;
+            animation-duration: 4s;
+            animation-delay: 4s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        @keyframes snowOnFaceAnimation {
+
+            /* animation for snowToLeft */
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(4) rotateX(200deg) rotateY(360deg);
+            }
+
+            75% {
+                transform: scale(4) rotateX(200deg) rotateY(360deg);
+            }
+
+            80% {
+                transform: scale(4) rotateX(200deg) rotateY(360deg);
+            }
+
+            90% {
+                transform: scale(4) rotateX(200deg) rotateY(360deg);
+            }
+
+            99% {
+                opacity: 0;
+                transform: scale(4) rotateX(200deg) rotateY(360deg);
+            }
+
+            100% {
+                transform: scale(4) rotateX(200deg) rotatY(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ===============Button to initiate snowfall=========== */
+        #button {
+            /* this is a stop button */
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #button:hover {
+            animation: twinkleAnimation 500ms linear 1;
+        }
+
+        @keyframes twinkleAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-20deg);
+            }
+
+            50% {
+                transform: rotate(20deg);
+            }
+
+            75% {
+                transform: rotate(-20deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ====================================section=============================================== */
+
+        #section {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background: url(www.jpg) no-repeat center center /cover;
+        }
+
+        #overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.774);
+        }
+
+        #container {
+            position: relative;
+            top: 55vh;
+            left: -20vw;
+            display: inline-block;
+        }
+
+        .tree {
+            animation: archa 20s linear infinite forwards;
+            /* animation-play-state: paused; */
+            position: absolute;
+            left: 0;
+            color: transparent;
+        }
+
+        @keyframes archa {
+            0% {
+                transform: translate(0%, 0%);
+                color: rgb(231, 231, 231);
+            }
+
+            10% {
+                transform: translate(40vw, -5vh);
+                color: rgb(0, 204, 255);
+            }
+
+            20% {
+                transform: translate(5vw, -10vh);
+                color: blue;
+            }
+
+            30% {
+                transform: translate(35vw, -15vh);
+                color: rgb(255, 255, 255);
+            }
+
+            40% {
+                transform: translate(10vw, -20vh);
+                color: rgb(0, 225, 255);
+            }
+
+            50% {
+                transform: translate(30vw, -25vh);
+                color: rgb(0, 47, 255);
+            }
+
+            60% {
+                transform: translate(15vw, -30vh);
+                color: white;
+            }
+
+            70% {
+                transform: translate(25vw, -35vh);
+                color: rgb(43, 205, 226);
+            }
+
+            80% {
+                transform: translate(18vw, -37vh);
+                color: rgb(226, 223, 43);
+            }
+
+            85% {
+                transform: translate(21.5vw, -40vh);
+                /* color: white; */
+            }
+
+            90% {
+                transform: translate(21.5vw, -45vh) scale(0);
+                color: white;
+                opacity: 1;
+            }
+
+            91% {
+                transform: translate(21.5vw, -45vh) scale(3);
+                opacity: 1;
+            }
+
+            96% {
+                transform: translate(21.5vw, -45vh) scale(4);
+            }
+
+            100% {
+                transform: translate(21.5vw, -45vh);
+                color: transparent;
+                opacity: 0;
+            }
+
+
+        }
+
+        #example {
+            animation: justRotate 2s linear forwards infinite;
+            /* z-index: 200000;   */
+        }
+
+        @keyframes justRotate {
+            0% {
+                transform: rotate(0deg) scale(2);
+                color: blue;
+            }
+
+            100% {
+                transform: rotate(-400deg) scale(2);
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- bu yerda qor yog'adi -->
+    <main id="main">
+        <h2 id="Hello">Kirib kelayotgan Yangi Yil bilan!!!
+            <span>-- Mirkomil Muqimov</span>
+        </h2>
+
+        <!-- up -->
+        <div class="toUpContainer">
+            <i class="fa fa-snowflake-o snowToUp" aria-hidden="true" id="thirdSnow"></i>
+        </div>
+
+        <!-- middle -->
+        <div class="toRight_Middle_Container">
+            <i class="fa fa-snowflake-o snowToMiddleR" aria-hidden="true" id="fourthSnow"></i>
+        </div>
+
+        <div class="toLeft_Middle_Container">
+            <i class="fa fa-snowflake-o snowToMiddleL" aria-hidden="true" id="fifthSnow"></i>
+        </div>
+
+        <!-- bottom -->
+        <div class="toRightContainer">
+            <i class="fa fa-snowflake-o snowToRight" aria-hidden="true" id="firstSnow"></i>
+        </div>
+
+        <div class="toLeftContainer">
+            <i class="fa fa-snowflake-o snowToLeft" aria-hidden="true" id="secondSnow"></i>
+        </div>
+
+        <!-- fall to face (center) :) -->
+        <div class="toFaceContainer">
+            <i class="fa fa-snowflake-o snowtoFace" aria-hidden="true" id="snowOnFace"></i>
+        </div>
+    </main>
+
+    <section id="section">
+        <div id="overlay"></div>
+        <div id="container">
+            <i class="fa fa-snowflake-o" aria-hidden="true" id="example"></i>
+        </div>
+    </section>
+
+    <button id="button">Qor yog'ishni boshlang</button>
+
+
+    <!-- <script src="main.js"></script> -->
+    <script>
+        var snowNumber = 100; //<--this is the number of snowflakes MULTIPLED BY 5 BECAUSE WE HAVE 5 SECTIONS OR DIRECTIONS IN WHICH SNOW IS FALING. DO NOT INCREASE IT TOO MUCH ! IT WILL CONSUME YOUR CPU AND MEMORY!
+        var differentiate;      //<-- this is the different vertical position of each snowflake
+        var element;            //<-- this is the actual snowflakes in HTML+CSS
+        var delay;              //<-- this is the delay time each decideing when each snowflake animation starts
+        var faceSnowAnimation;  //bu faceSnowAnimation uchun intervalni yoqib o'chirish uchun kerak.
+        let snowflakeForTree;  //bu archa daraxti yasash uchun kerakli o'zgaruvchi 
+        var audio = new Audio('bes.mp3');//this is just an audio.
+        audio.loop = true;     //audioni uzluksiz eshitish uchun
+        // var audio2 = new Audio('https://cf-media.sndcdn.com/jBAW6NXMR9yL?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vakJBVzZOWE1SOXlMIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjA5MDgwNDIzfX19XX0_&Signature=Q-5n-BJqhDFV50N7UoHD~6uPiYzL06fhMJI9WMnJsyKvgzxnp4aIHMX9Dg-cTMJfBoTsd-5VQoAP2LlxyRgKVwnpGGUEGiadvROvGvJnvg1qz3DaXkADPIi7V6rjwXpniLCPQo~SfBSYWeClRby06MHT0MevxWGhwvpsnLqwqynm2ZmwOC52lJ3U9kTbtlyfMuLA2LxBnR073YitegOx~BubkhBwjNew1QEnbwUqQ1F9nADT6IvvivL1T1Wx5a6BFn0FT5zYVuhFIs5r6PRfkdbUYECV36aT4aIeeqI4UUGdXVEgCEIK7kWnq58V3LC6l0rheOFTVBmXCVbz08FyVw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ');
+        var audio2 = new Audio('yangi.mp3');
+        audio2.loop = true;
+
+
+        var greet = window.setTimeout(function () {  //tabrik so'zini 5s dan keyin olib tashlaydi
+            document.getElementById("Hello").remove();
+        }, 5000);
+
+        function snowing() {
+
+            //======================to up side flow==================================
+
+            for (let i = 1; i <= snowNumber; i++) {
+
+                differentiate = Math.random() * (200);
+                delay = Math.random() * 10;
+                //generating snowflakes :
+                element = "<i class=\"fa fa-snowflake-o snowToUp\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                //adding snowflakes to HTML page, after one #secondSnow element :
+                document.getElementById("thirdSnow").insertAdjacentHTML("afterend", element);
+            }
+
+            //======================to right Middle flow=============================
+
+            for (let i = 1; i <= snowNumber; i++) {
+
+                differentiate = Math.random() * (300);
+                delay = Math.random() * 10;
+                //generating snowflakes :
+                element = "<i class=\"fa fa-snowflake-o snowToMiddleR\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                //adding snowflakes to HTML page :
+                document.getElementById("fourthSnow").insertAdjacentHTML("afterend", element);
+            }
+            //======================to left Middle flow=============================
+
+            for (let i = 1; i <= snowNumber; i++) {
+
+                differentiate = Math.random() * (300);
+                delay = Math.random() * 10;
+                //generating snowflakes :
+                element = "<i class=\"fa fa-snowflake-o snowToMiddleL\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                //adding snowflakes to HTML page :
+                document.getElementById("fifthSnow").insertAdjacentHTML("afterend", element);
+            }
+
+            //======================to right Bottom side flow=============================
+
+            for (let i = 1; i <= snowNumber; i++) {
+
+                differentiate = Math.random() * (400);
+                delay = Math.random() * 10;
+                //generating snowflakes :
+                element = "<i class=\"fa fa-snowflake-o snowToRight\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                //adding snowflakes to HTML page :
+                document.getElementById("firstSnow").insertAdjacentHTML("afterend", element);
+            }
+            //=======================to left Bottom side flow =============================
+
+            for (let i = 1; i <= snowNumber; i++) {
+
+                differentiate = Math.random() * (400);
+                delay = Math.random() * 10;
+                //generating snowflakes :
+                element = "<i class=\"fa fa-snowflake-o snowToLeft\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                //adding snowflakes to HTML page, after one #secondSnow element :
+                document.getElementById("secondSnow").insertAdjacentHTML("afterend", element);
+            }
+
+            //=======================SNOW TO FACE HAHA :)==================================
+            faceSnowAnimation = window.setInterval(faceSnow, 8000); /* har 8 sekundda ekranga qor tushib yopishib qoladi*/
+            function faceSnow() {
+
+                differentiate = Math.random() * (200);
+                delay = 0;
+                document.getElementById("snowOnFace").outerHTML = "<i class=\"fa fa-snowflake-o snowtoFace\" id=\"snowOnFace\" style=\"top: " + differentiate + "px; animation-delay: " + delay + "s\"></i>";
+                // document.getElementById("snowOnFace").style.top = differentiate + "px";
+
+
+            }
+
+            // audio =++++++++++++++
+            audio.play();
+
+        }
+
+        // document.onload = snowing();//yuklanishi bilan animatsiya ham boshlanib ketadi. Bu yaxshi samara bermadi , chunki js autoplay audio xizmatini ishlatishga ruxsat bermadi.
+
+        document.getElementById("button").addEventListener("click", function () {//toggle animation button
+
+            if (this.innerHTML == "Stop snowing") {//animatsiyani o'chiradi :
+
+                // let itemToDelete = document.querySelectorAll("i");
+                // for(let i=0; i<itemToDelete.length; i++){
+                // itemToDelete[i].remove();      
+                // }
+                document.getElementById("button").innerHTML = "Orqaga)";
+                window.clearInterval(faceSnowAnimation);
+                audio.pause();
+                document.getElementById("section").style.display = "block";
+                document.getElementById("main").style.display = "none";
+                drawTree();
+                audio2.play();
+            }
+            else {//reload qilish uchun
+                if (document.getElementById("button").innerHTML == "Orqaga)") {
+                    location.reload();
+                }
+
+                else {//birinchi marta qor yog'dirish uchun
+                    audio.play();
+                    snowing();
+                    document.getElementById("button").innerHTML = "Stop snowing";
+
+                }
+
+            }
+
+        });
+
+        function drawTree() {
+            for (let i = 1; i <= 100; i++) {
+                snowflakeForTree = "<i class=\"fa fa-snowflake-o tree\" style=\"animation-delay: " + i / 3 + "s\"></i>";
+                document.getElementById("example").insertAdjacentHTML("afterend", snowflakeForTree);
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
